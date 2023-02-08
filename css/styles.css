@@ -23,8 +23,65 @@ body {
 a {
 	text-decoration: none;
 }
-/* навигация-шапка */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin-top: 0;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+}
+.list {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.container {
+	width: 1158px;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+/* ========навигация-шапка========= */
+address {
+	margin-left: auto;
+}
+.address-nav {
+	display: flex;
+}
+.address-nav li + li {
+	margin-left: 40px;
+}
+.list-nav {
+	display: flex;
+	flex-direction: row;
+}
+.list-nav li + li {
+	margin-left: 40px;
+}
+.header-list {
+	display: flex;
+	align-items: center;
+}
+.page-nav {
+	display: flex;
+	align-items: center;
+}
 .link-nav {
+	display: block;
+	padding-top: 24px;
+	padding-bottom: 24px;
+
 	font-weight: 500;
 	color: var(--navyblue-shadow);
 }
@@ -46,10 +103,8 @@ a {
 .link-address:focus {
 	color: var(--ocean);
 }
-.list {
-	list-style: none;
-}
 .logo {
+	margin-right: 76px;
 	font-family: "Raleway", sans-serif;
 	font-weight: 800;
 	font-size: 18px;
@@ -61,30 +116,41 @@ a {
 .logo > span {
 	color: var(--iris-active-focused);
 }
-/* Оформление героя */
+header {
+	border-bottom: 1px solid var(--cornflower-accent);
+}
+/* =========Оформление героя================== */
 .hero {
 	background-color: var(--navyblue-shadow);
-}
-.title-first {
-	font-size: 56px;
-	line-height: 1.07;
 	text-align: center;
-	color: var(--white);
 }
 .button {
+	margin-top: 48px;
+	margin-right: auto;
+	margin-left: auto;
+	padding: 16px 32px;
+
 	font-family: "Roboto", sans-serif;
 	cursor: pointer;
 	background: var(--iris-active-focused);
 	font-weight: 500;
 	letter-spacing: 0.04em;
 	text-align: center;
-	border: 1px solid var(--iris-active-focused);
+	min-width: 169px;
+	border: 1px solid transparent;
 	border-radius: 4px;
 	color: var(--white);
 }
 .button:hover,
 .button:focus {
 	background-color: var(--ocean);
+}
+/* Заголовки */
+.title-first {
+	font-size: 56px;
+	line-height: 1.07;
+	text-align: center;
+	color: var(--white);
 }
 .title-second {
 	font-size: 36px;
@@ -99,16 +165,69 @@ a {
 	line-height: 1.2;
 	color: var(--navyblue-shadow);
 }
+/* ==============Преимущества============= */
+.section {
+	padding-top: 120px;
+	padding-bottom: 120px;
+}
+.advantages .item {
+	width: calc((100%-72px) / 4);
+	margin-right: 24px;
+}
+.advantages .item:last-child {
+	margin-right: 0;
+}
+.advantages .list {
+	display: flex;
+}
+/* =====Что мы делаем============= */
+.list-areas {
+	display: flex;
+	justify-content: space-between;
+}
+.areas {
+	padding-top: 0;
+}
+/* =================Команда=============== */
 .team {
 	background-color: var(--cloud-light);
 }
+.team .title-second,
+.areas .title-second {
+	padding-bottom: 72px;
+}
+.list-empl {
+	display: flex;
+	justify-content: space-between;
+}
+
+.empl-name {
+	text-align: center;
+	padding-bottom: 32px;
+	padding-top: 32px;
+}
+.list-empl .title-third {
+	padding-bottom: 8px;
+}
+/* =========Footer======== */
 .footer {
 	background-color: var(--navyblue-shadow);
 	color: var(--cornflower-accent);
 }
 .logo-footer {
+	display: flex;
 	color: var(--cloud-light);
 }
+.footer-items {
+	margin-left: 0;
+	padding-top: 100px;
+	padding-bottom: 100px;
+	width: 264px;
+}
+.footer-items p {
+	padding-top: 16px;
+}
+/* Кнопки фильтра портфолио */
 .button-filter {
 	font-family: "Roboto", sans-serif;
 	cursor: pointer;
@@ -126,4 +245,41 @@ a {
 }
 .sample-type {
 	color: var(--body-text);
+}
+.btns-filter {
+	display: flex;
+	margin-top: 96px;
+	margin-bottom: 72px;
+	justify-content: center;
+}
+.btns-filter li + li {
+	margin-left: 24px;
+}
+.img-works {
+	display: flex;
+	flex-wrap: wrap;
+	flex-basis: calc((100%-48) / 3);
+	margin-left: -24px;
+	margin-bottom: -24px;
+}
+.img-works .title-third {
+	padding-left: 16px;
+	padding-top: 32px;
+}
+.img-works p {
+	margin-top: 8px;
+	padding-bottom: 32px;
+	padding-left: 16px;
+}
+.img-works li {
+	margin-left: 24px;
+	margin-bottom: 48px;
+}
+.img-works li:nth-child(3n) {
+	margin-right: 0;
+}
+.img-title {
+	border-bottom: 1px solid var(--cornflower-accent);
+	border-right: 1px solid var(--cornflower-accent);
+	border-left: 1px solid var(--cornflower-accent);
 }
